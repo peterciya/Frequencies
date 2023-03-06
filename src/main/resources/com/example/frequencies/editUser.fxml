@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.EditUser">
+   <children>
+      <AnchorPane prefHeight="121.0" prefWidth="465.0">
+         <children>
+            <Text layoutX="180.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un utilisateur" wrappingWidth="140.0" />
+         </children>
+      </AnchorPane>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Prenom" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <TextField fx:id="prenomTextField" layoutX="47.0" layoutY="17.0" onAction="#ajouter" prefHeight="31.0" prefWidth="140.0" promptText="prenom" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="131.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Nom" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <TextField fx:id="nomTextField" layoutX="47.0" layoutY="17.0" onAction="#ajouter" prefHeight="31.0" prefWidth="140.0" promptText="nom" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="231.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Matricule" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <ChoiceBox fx:id="matriculeChoiceBox" layoutX="47.0" layoutY="15.0" prefHeight="31.0" prefWidth="140.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="331.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Sexe" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <ChoiceBox fx:id="sexeChoiceBox" layoutX="47.0" layoutY="16.0" prefHeight="31.0" prefWidth="140.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="117.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Téléphone" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <TextField fx:id="phoneTextField" layoutX="47.0" layoutY="17.0" onAction="#ajouter" prefHeight="31.0" prefWidth="140.0" promptText="ex: 0972552492" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="398.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Email" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <TextField fx:id="emailTextField" layoutX="8.0" layoutY="17.0" onAction="#ajouter" prefHeight="31.0" prefWidth="178.0" promptText="consolate@gmail.com" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="351.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Adresse" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <TextField fx:id="adresseTextField" layoutX="8.0" layoutY="17.0" onAction="#ajouter" prefHeight="31.0" prefWidth="178.0" promptText="ex: Bel Air, Lubumbashi" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="93.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Mot de passe" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <PasswordField fx:id="passwordField1" layoutX="46.0" layoutY="13.0" onAction="#ajouter" prefHeight="31.0" prefWidth="140.0" promptText="Mot de passe" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="481.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="22.0" text="Confirmer Mot de passe" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
+               <children>
+                  <PasswordField fx:id="passwordField2" layoutX="27.0" layoutY="13.0" onAction="#ajouter" prefHeight="31.0" prefWidth="140.0" promptText="Mot de passe" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="36.0" prefWidth="499.0">
+         <children>
+            <AnchorPane prefHeight="65.0" prefWidth="499.0">
+               <children>
+                  <TextField fx:id="messageTextField" layoutX="115.0" layoutY="12.0" onAction="#ajouter" prefHeight="31.0" prefWidth="277.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="465.0">
+         <children>
+            <Button fx:id="validerBouton" layoutX="116.0" layoutY="20.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="113.0" text="Valider" />
+            <Button fx:id="nettoyerBouton" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" onAction="#nettoyer" prefHeight="31.0" prefWidth="113.0" text="Nettoyer" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

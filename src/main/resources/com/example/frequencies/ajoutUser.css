@@ -1,0 +1,110 @@
+.root {
+    -fx-background-color: #2B2B2B;
+}
+#vb1 {
+    -fx-background-color:#3C3F41;
+    -fx-background-radius: 15;
+     -fx-opacity: 0.9;
+}
+.button {
+    -fx-background-color: #3E86A0;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 21px;
+    -fx-font-family: "Crimson";
+}.button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+    -fx-border-radius: 25px;
+
+}
+}.button:pressed {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color:  #69C33B;
+    -fx-font-size: 20px;
+    -fx-border-width: 2;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 20;
+
+}
+.text-input {
+    -fx-background-color: #3C3F41;
+    -fx-background-radius: 15;
+    -fx-border-color: #3E86A0;
+    -fx-border-radius: 15;
+    -fx-border-width: 2;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16px;
+    -fx-background-opacity: 0.8;
+}
+.text-input:hover {
+    -fx-border-color: #69C33B;
+    -fx-border-width: 3;
+    -fx-font-size: 20px;
+    -fx-text-fill: #FFFFFF;
+}
+.text-input:focused {
+    -fx-border-color: #96342A;
+    -fx-border-width: 3;
+    -fx-font-size: 19px;
+}
+.label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 32px;
+}
+#label1 {
+    -fx-border-color: #3C3F41;
+    -fx-font-size: 15px;
+    -fx-text-fill: #69C33B;
+}
+#genre {
+    -fx-background-color: #3C3F41;
+    -fx-font-size: 16px;
+    -fx-text-fill: #94A4A4;
+}
+#hbGenre {
+     -fx-background-radius: 15;
+     -fx-border-color: #3E86A0;
+     -fx-border-radius: 15;
+     -fx-border-width: 2;
+     -fx-font-size: 22px;
+}
+.check-box .box {
+
+-fx-background-color: #3C3F41;
+-fx-border-color: #FFFFFF;
+-fx-background-radius: 20px;
+-fx-border-radius: 20px;
+
+}
+
+.check-box:selected .mark {
+-fx-background-color: white;
+
+}
+.check-box:selected .box {
+    -fx-background-color: #28a3f4;
+}
+.check-box:selected .box > .mark, .check-box:indeterminate > .box > .mark {
+    -fx-background-color: -fx-border-color: #3C7D94;
+}
+
+.choice-box {
+  -fx-background-color: black;
+  -fx-mark-color: orange;
+
+}
+#vbChoice {
+    -fx-min-width: 223px;
+    -fx-min-height: 33px
+}
+.choice-box .context-menu {-fx-background-color: white;}
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
+
+.choice-box > .label { -fx-text-fill: white; }
+.radio-button .radio:hover {
+    -fx-border-color: #15171c; /*gives the button a square border
+    -fx-border-radius: 130px;  rounds the border around the button, "faking" a nice round outline*
+}*/

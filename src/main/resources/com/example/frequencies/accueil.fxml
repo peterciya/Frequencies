@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="665.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Accueil">
+   <children>
+      <BorderPane prefHeight="665.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="564.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="accueilBouton" mnemonicParsing="false" onAction="#accueil" prefHeight="83.0" prefWidth="220.0" text="PROFILE" />
+                  <Button fx:id="usersBouton" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
+                  <Button fx:id="abonnesBouton" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
+                  <Button fx:id="frequencesBouton" mnemonicParsing="false" onAction="#frequence" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
+                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="MATRICULES" />
+                  <Button fx:id="deconnexionBouton" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <VBox prefHeight="114.0" prefWidth="1101.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="113.0" prefWidth="1101.0">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="220.0" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="631.0" />
+                        <AnchorPane layoutX="230.0" layoutY="10.0" prefHeight="79.0" prefWidth="262.0">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="50.0" layoutX="14.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@logos/search_100px.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField layoutX="47.0" layoutY="50.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="362.0" />
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="378.0">
+                     <children>
+                        <Text layoutX="1.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="     Tous droits reservés. By peterciya21@gmail.com" wrappingWidth="376.6708984375" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="372.0" layoutY="10.0" prefHeight="100.0" prefWidth="361.0" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="451.0" prefWidth="865.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="73.0" layoutY="255.0" prefHeight="170.0" prefWidth="735.0">
+                     <children>
+                        <VBox prefHeight="397.0" prefWidth="420.0">
+                           <children>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                                 <children>
+                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Text layoutX="30.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fréquences Attribuées :" wrappingWidth="123.6708984375" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                                 <children>
+                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Text layoutX="30.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fréquences Non Attribuées :" wrappingWidth="123.6708984375" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="397.0" prefWidth="420.0">
+                           <children>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                                 <children>
+                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Text layoutX="30.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fréquences :" wrappingWidth="123.6708984375" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                                 <children>
+                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Text layoutX="30.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Abonné(e)s :" wrappingWidth="123.6708984375" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
+                                       <children>
+                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="70.0" layoutY="108.0" prefHeight="147.0" prefWidth="742.0">
+                     <children>
+                        <VBox prefHeight="73.0" prefWidth="379.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="187.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher une fréquence :" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="attrBouton" layoutX="186.0" layoutY="22.0" mnemonicParsing="false" onAction="#attribuer" text="Attribuer une fréquence" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="73.0" prefWidth="379.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField layoutX="41.0" layoutY="23.0" prefHeight="31.0" prefWidth="210.0" promptText="exemple: 586.54 Mhz" />
+                                    <Button fx:id="rechBouton" layoutX="245.0" layoutY="23.0" mnemonicParsing="false" text="Rechercher" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="desattrBouton" layoutX="137.0" layoutY="22.0" mnemonicParsing="false" onAction="#desattribuer" text="Désattribuer une fréquence" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

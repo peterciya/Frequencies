@@ -1,0 +1,51 @@
+.root {
+    -fx-background-color: #2B2B2B;
+}
+.table-view{
+   -fx-background-color: transparent;
+   -fx-border-background-radius: 10px 10px 10px 10px;
+}
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+}
+.table-view .column-header {
+    -fx-text-background-color: #FFFFFF;
+    -fx-background-color: #216283;
+}
+.table-view .column-header-background{
+    -fx-background-radius: 7px 7px 0px 0px;
+    /*-fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;*/
+}
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell: hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: red;
+}
+.table-row-cell: odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell: even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.button{
+          -fx-background-color: #2B2B2B;
+          -fx-background-radius: 0;
+          -fx-text-fill: #FFFFFF;
+}
+.button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+
+}

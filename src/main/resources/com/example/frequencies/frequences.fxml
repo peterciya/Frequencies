@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="665.0" prefWidth="1101.0" stylesheets="@frequences.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Frequences">
+   <children>
+      <BorderPane prefHeight="665.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="564.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="profileBouton" mnemonicParsing="false" onAction="#profile" prefHeight="83.0" prefWidth="220.0" text="PROFILE" />
+                  <Button fx:id="usersBouton" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
+                  <Button fx:id="abonnesBouton" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
+                  <Button fx:id="frequencesBouton" mnemonicParsing="false" onAction="#frequences" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
+                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="MATRICULES" />
+                  <Button fx:id="deconnexionBouton" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <VBox prefHeight="114.0" prefWidth="1101.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="113.0" prefWidth="1101.0">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="220.0" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="631.0" />
+                        <AnchorPane layoutX="230.0" layoutY="10.0" prefHeight="79.0" prefWidth="262.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="484.0" prefWidth="881.0">
+                     <children>
+                        <TableView fx:id="frequences" layoutX="8.0" prefHeight="383.0" prefWidth="851.0">
+                           <columns>
+                              <TableColumn fx:id="idColumn" minWidth="8.0" prefWidth="69.0" text="ID" />
+                              <TableColumn fx:id="frequenceColumn" minWidth="0.0" prefWidth="158.0" text="FREQUENCE" />
+                              <TableColumn fx:id="dateAjoutColumn" minWidth="0.0" prefWidth="154.0" text="DATE_AJOUT" />
+                              <TableColumn fx:id="etatColumn" prefWidth="182.0" text="ETAT" />
+                              <TableColumn fx:id="idAbonneColumn" minWidth="0.0" prefWidth="154.0" text="ID_ABONNE" />
+                              <TableColumn fx:id="idUserColumn" minWidth="0.0" prefWidth="140.0" text="ID_USER" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="144.0" prefWidth="881.0">
+                     <children>
+                        <Button fx:id="ajouterBouton" layoutX="71.0" layoutY="12.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+                        <Button fx:id="editBouton" layoutX="280.0" layoutY="12.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+                        <Button fx:id="deleteBouton" layoutX="716.0" layoutY="12.0" mnemonicParsing="false" onAction="#supprimer" stylesheets="@frequences.css" text="Supprimer" />
+                        <Button fx:id="refreshBouton" layoutX="494.0" layoutY="13.0" mnemonicParsing="false" onAction="#refresh" text="Rafraichir" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="362.0" />
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="378.0">
+                     <children>
+                        <Text layoutX="1.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="     Tous droits reservés. By peterciya21@gmail.com" wrappingWidth="376.6708984375" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="372.0" layoutY="10.0" prefHeight="100.0" prefWidth="361.0" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="795.0" stylesheets="@ajoutUser.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.AjoutUser">
+   <children>
+      <VBox id="vb1" layoutX="72.0" layoutY="31.0" prefHeight="461.0" prefWidth="633.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="31.0">
+         <children>
+            <AnchorPane prefHeight="124.0" prefWidth="633.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="112.0" layoutY="1.0" prefHeight="47.0" prefWidth="410.0" text="    Ajouter un Utilisateur    " />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="234.0" prefWidth="641.0">
+               <children>
+                  <HBox layoutX="116.0" prefHeight="211.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="382.0" prefWidth="383.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="215.0">
+                                       <children>
+                                          <TextField prefHeight="31.0" prefWidth="223.0" promptText="Prenom" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="176.0" />
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="176.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="220.0">
+                                       <children>
+                                          <TextField fx:id="nomTextField" prefHeight="31.0" prefWidth="178.0" promptText="Nom" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="349.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="176.0" />
+                                 </children>
+                              </HBox>
+                              <HBox id="hbGenre" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane id="anchoGenre" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label id="genre" prefHeight="27.0" prefWidth="57.0" text=" Genre: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-24.0" AnchorPane.topAnchor="0.0" />
+                                          <RadioButton layoutX="66.0" layoutY="1.0" mnemonicParsing="false" text="M" />
+                                       </children>
+                                    </AnchorPane>
+                                    <RadioButton mnemonicParsing="false" text="F" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="353.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="176.0" />
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="176.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="296.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="231.0">
+                                       <children>
+                                          <TextField promptText="Téléphone" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="393.0" layoutY="10.0" prefHeight="234.0" prefWidth="262.0" />
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="382.0" prefWidth="383.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="227.0">
+                                       <children>
+                                          <TextField promptText="Email" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="176.0" />
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="176.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="225.0">
+                                       <children>
+                                          <TextField promptText="Adresse" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="349.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="176.0" />
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="176.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="221.0">
+                                       <children>
+                                          <ChoiceBox style="-fx-pref-width: 199; -fx-pref-height: 69;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="353.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="176.0" />
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="176.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="296.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="225.0">
+                                       <children>
+                                          <TextField promptText="Mot de passe" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="633.0" />
+            <AnchorPane layoutX="10.0" layoutY="322.0" prefHeight="172.0" prefWidth="633.0">
+               <children>
+                  <VBox layoutX="137.0" layoutY="-30.0" prefHeight="170.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="58.0" layoutY="-16.0" prefHeight="184.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox layoutX="163.0" layoutY="-26.0" prefHeight="74.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane prefHeight="45.0" prefWidth="529.0">
+                                                   <children>
+                                                      <Label id="label1" layoutX="98.0" layoutY="3.0" prefHeight="47.0" prefWidth="211.0" text=" Veuillez emplir tous les champs, puis validez." AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="3.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="313.0">
+                                                   <children>
+                                                      <Button layoutX="35.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="0.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox layoutX="155.0" layoutY="-17.0" prefHeight="83.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="346.0" />
+                                                <AnchorPane layoutX="210.0" layoutY="10.0" prefHeight="28.0" prefWidth="157.0" />
+                                                <AnchorPane layoutX="410.0" layoutY="10.0" prefHeight="28.0" prefWidth="82.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <AnchorPane layoutX="10.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
