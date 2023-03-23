@@ -5,23 +5,27 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Abonnes {
+public class Abonnes implements Initializable {
     @FXML
     Button profileBouton, usersBouton, abonnesBouton, frequencesBouton, deconnexionBouton, ajouterBouton, deleteBouton, refreshBouton, editBouton;
     @FXML
@@ -52,7 +56,7 @@ public class Abonnes {
         main.changeScene("frequences.fxml");
     }
     public void matricules(ActionEvent event) throws IOException{
-        main.changeScene("matricules.fxml");
+        main.changeScene("parametres.fxml");
     }
     public void deconnexion(ActionEvent event) throws IOException{
         main.changeScene("login.fxml");
@@ -98,10 +102,25 @@ public class Abonnes {
                     resultSet.getString("denomination"),
                     resultSet.getString("telephone"),
                     resultSet.getString("email"),
-                    resultSet.getString("adresse"),
-                    resultSet.getInt("id_frequence")));
+                    resultSet.getString("adresse")));
             abonnes.setItems(Abonnes);
         }
     }
+    public void charger() throws SQLException{
+        refresh();
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        denominationColumn.setCellValueFactory(new PropertyValueFactory<>("denomination"));
+        phoneColumn.setCellValueFactory(new PropertyValueFactory<>("telephone"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        adresseColumn.setCellValueFactory(new PropertyValueFactory<>("adresse"));
+    }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            charger();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

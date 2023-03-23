@@ -52,7 +52,7 @@ public class Users implements Initializable {
             main.changeScene("frequences.fxml");
         }
         public void matricules(ActionEvent event) throws IOException{
-            main.changeScene("matricules.fxml");
+            main.changeScene("parametres.fxml");
         }
         public void deconnexion(ActionEvent event) throws IOException{
             main.changeScene("login.fxml");

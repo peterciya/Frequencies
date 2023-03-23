@@ -12,10 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 public class Frequences implements Initializable {
@@ -32,7 +29,6 @@ public class Frequences implements Initializable {
     Connection connection = dbConnection.getConnection();
     PreparedStatement statement;
     ResultSet resultSet;
-    AjoutFrequence ajoutFrequence;
     String query;
 
 
@@ -48,8 +44,8 @@ public class Frequences implements Initializable {
     public void frequences(ActionEvent event) throws IOException{
         main.changeScene("frequences.fxml");
     }
-    public void matricules(ActionEvent event) throws IOException{
-        main.changeScene("matricules.fxml");
+    public void parametres(ActionEvent event) throws IOException{
+        main.changeScene("parametres.fxml");
     }
     public void deconnexion(ActionEvent event) throws IOException{
         main.changeScene("login.fxml");
@@ -69,17 +65,17 @@ public class Frequences implements Initializable {
     }
     public void refresh() throws SQLException {
         Frequences.clear();
-        query ="SELECT * FROM `frequence`";
+        query ="SELECT * FROM `frequence`";/*WHERE `frequence`.`id` = `users`.`id` AND `frequence`.`id` = `abonnes`.`id`*/
         statement = connection.prepareStatement(query);
         resultSet = statement.executeQuery();
         while (resultSet.next()){
             Frequences.add(new Frequence(
                     resultSet.getInt("id"),
                     resultSet.getDouble("frequence"),
-                    resultSet.getDate("date_ajout"),
-                    resultSet.getString("etat"),
-                    resultSet.getInt("id_abonne"),
-                    resultSet.getInt("id_user")));
+                    resultSet.getDate("dateAjout"),
+                    resultSet.getInt("etat"),
+                    resultSet.getInt("idAbonne"),
+                    resultSet.getInt("idUser")));
             frequences.setItems(Frequences);
 
         }
@@ -89,9 +85,10 @@ public class Frequences implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             charger();
-        } catch (SQLException e){
-            throw new RuntimeException();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
+
 
     }
 
@@ -99,10 +96,10 @@ public class Frequences implements Initializable {
         refresh();
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         frequenceColumn.setCellValueFactory(new PropertyValueFactory<>("frequence"));
-        dateAjoutColumn.setCellValueFactory(new PropertyValueFactory<>("date_ajout"));
+        dateAjoutColumn.setCellValueFactory(new PropertyValueFactory<>("dateAjout"));
         etatColumn.setCellValueFactory(new PropertyValueFactory<>("etat"));
-        idAbonneColumn.setCellValueFactory(new PropertyValueFactory<>("id_abonne"));
-        idUserColumn.setCellValueFactory(new PropertyValueFactory<>("id_user"));
+        idAbonneColumn.setCellValueFactory(new PropertyValueFactory<>("idAbonne"));
+        idUserColumn.setCellValueFactory(new PropertyValueFactory<>("idUser"));
 
     }
 }

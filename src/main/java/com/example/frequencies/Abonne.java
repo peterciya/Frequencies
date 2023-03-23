@@ -8,7 +8,7 @@ public class Abonne {
     String adresse;
     int id_frequence;
 
-    public Abonne(int id, String denomination, String telephone, String email, String adresse, int id_frequence) {
+    public Abonne(int id, String denomination, String telephone, String email, String adresse) {
         this.id = id;
         this.denomination = denomination;
         this.telephone = telephone;

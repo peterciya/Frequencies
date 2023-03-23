@@ -1,0 +1,6 @@
+.round-box{
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-border-width: 5px;
+    -fx-background-color: #F3F3F3
+}

@@ -8,17 +8,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="665.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Menu">
+<AnchorPane prefHeight="665.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Parametres">
    <children>
       <BorderPane prefHeight="665.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <VBox prefHeight="564.0" prefWidth="220.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#profile" prefHeight="83.0" prefWidth="220.0" text="PROFILE" />
+                  <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#accueil" prefHeight="83.0" prefWidth="220.0" text="ACCUEIL" />
                   <Button fx:id="usersBtn" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
                   <Button fx:id="abonnesBtn" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
-                  <Button fx:id="ajouterBtn" mnemonicParsing="false" onAction="#ajouter" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
-                  <Button fx:id="parametresBtn" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="MATRICULES" />
+                  <Button fx:id="ajouterBtn" mnemonicParsing="false" onAction="#frequence" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
+                  <Button fx:id="matriculesBtn" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="PARAMETRES" />
                   <Button fx:id="deconnexionBtn" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
                </children>
             </VBox>

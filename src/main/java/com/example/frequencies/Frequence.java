@@ -6,17 +6,17 @@ public class Frequence {
     private int id;
     private double frequence;
     private Date dateAjout;
-    private String etat;
+    private int etat;
     private int idAbonne;
     private int idUser;
 
-    public Frequence(int id, double frequence, Date dateAjout, String etat, int idAbonne, int idUser) {
+    public Frequence(int id, double frequence, Date date_ajout, int etat, int id_abonne, int id_user) {
         this.id = id;
         this.frequence = frequence;
-        this.dateAjout = dateAjout;
+        this.dateAjout = date_ajout;
         this.etat = etat;
-        this.idAbonne = idAbonne;
-        this.idUser = idUser;
+        this.idAbonne = id_abonne;
+        this.idUser = id_user;
     }
 
     public int getId() {
@@ -43,11 +43,11 @@ public class Frequence {
         this.dateAjout = dateAjout;
     }
 
-    public String getEtat() {
+    public int getEtat() {
         return etat;
     }
 
-    public void setEtat(String etat) {
+    public void setEtat(int etat) {
         this.etat = etat;
     }
 

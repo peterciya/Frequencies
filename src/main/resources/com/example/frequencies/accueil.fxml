@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -20,7 +22,7 @@
                   <Button fx:id="usersBouton" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
                   <Button fx:id="abonnesBouton" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
                   <Button fx:id="frequencesBouton" mnemonicParsing="false" onAction="#frequence" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
-                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="MATRICULES" />
+                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="PARAMETRES" />
                   <Button fx:id="deconnexionBouton" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
                </children>
             </VBox>
@@ -34,12 +36,20 @@
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="631.0" />
                         <AnchorPane layoutX="230.0" layoutY="10.0" prefHeight="79.0" prefWidth="262.0">
                            <children>
-                              <ImageView fitHeight="33.0" fitWidth="50.0" layoutX="14.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@logos/search_100px.png" />
-                                 </image>
-                              </ImageView>
-                              <TextField layoutX="47.0" layoutY="50.0" />
+                              <HBox layoutX="29.0" layoutY="37.0" prefHeight="40.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField prefHeight="39.0" prefWidth="156.0" promptText="Fréquence" />
+                                    <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0">
+                                       <graphic>
+                                          <ImageView fitHeight="28.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@logos/search_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
                            </children>
                         </AnchorPane>
                      </children>
@@ -61,111 +71,95 @@
             </HBox>
          </bottom>
          <center>
-            <AnchorPane prefHeight="451.0" prefWidth="865.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox layoutX="73.0" layoutY="255.0" prefHeight="170.0" prefWidth="735.0">
+                  <HBox prefHeight="151.0" prefWidth="881.0">
                      <children>
-                        <VBox prefHeight="397.0" prefWidth="420.0">
+                        <VBox prefHeight="150.0" prefWidth="366.0">
                            <children>
-                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                              <Label prefHeight="40.0" prefWidth="294.0" text="                  TOTAL FREQUENCES " textAlignment="CENTER" />
+                              <AnchorPane prefHeight="96.0" prefWidth="294.0">
                                  <children>
-                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Text layoutX="30.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fréquences Attribuées :" wrappingWidth="123.6708984375" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                                       </children>
-                                    </AnchorPane>
+                                    <Label fx:id="tFreq" layoutX="72.0" layoutY="4.0" prefHeight="89.0" prefWidth="144.0">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
                                  </children>
-                              </HBox>
-                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                              </AnchorPane>
+                              <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="296.0" text="Button" />
+                           </children></VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="366.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="294.0" text="              FREQUENCES ATTRIBUEES " textAlignment="CENTER" />
+                              <AnchorPane prefHeight="96.0" prefWidth="294.0">
                                  <children>
-                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Text layoutX="30.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fréquences Non Attribuées :" wrappingWidth="123.6708984375" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                                       </children>
-                                    </AnchorPane>
+                                    <Label fx:id="tFreqAtt" layoutX="72.0" layoutY="4.0" prefHeight="89.0" prefWidth="144.0">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
                                  </children>
-                              </HBox>
+                              </AnchorPane>
+                              <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="296.0" text="Button" />
                            </children>
                         </VBox>
-                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="397.0" prefWidth="420.0">
+                        <VBox layoutX="376.0" layoutY="10.0" prefHeight="150.0" prefWidth="366.0">
                            <children>
-                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
+                              <Label prefHeight="40.0" prefWidth="294.0" text="         FREQUENCES NON ATTRIBUEES " textAlignment="CENTER" />
+                              <AnchorPane prefHeight="96.0" prefWidth="294.0">
                                  <children>
-                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Text layoutX="30.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fréquences :" wrappingWidth="123.6708984375" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                                       </children>
-                                    </AnchorPane>
+                                    <Label fx:id="tFreqNonAtt" layoutX="72.0" layoutY="4.0" prefHeight="89.0" prefWidth="144.0">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
                                  </children>
-                              </HBox>
-                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="420.0">
-                                 <children>
-                                    <AnchorPane prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Text layoutX="30.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Abonné(e)s :" wrappingWidth="123.6708984375" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="226.0">
-                                       <children>
-                                          <Circle fill="WHITE" layoutX="105.0" layoutY="42.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                                       </children>
-                                    </AnchorPane>
-                                 </children>
-                              </HBox>
+                              </AnchorPane>
+                              <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="296.0" text="Button" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox layoutX="70.0" layoutY="108.0" prefHeight="147.0" prefWidth="742.0">
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="151.0" prefWidth="881.0">
                      <children>
-                        <VBox prefHeight="73.0" prefWidth="379.0">
+                        <VBox prefHeight="150.0" prefWidth="366.0">
                            <children>
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                              <Label prefHeight="35.0" prefWidth="295.0" text="                     Total Abonnes" textAlignment="CENTER" />
+                              <AnchorPane prefHeight="117.0" prefWidth="294.0">
                                  <children>
-                                    <Text layoutX="187.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher une fréquence :" />
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button fx:id="attrBouton" layoutX="186.0" layoutY="22.0" mnemonicParsing="false" onAction="#attribuer" text="Attribuer une fréquence" />
-                                 </children>
-                              </AnchorPane>
+                                    <Label fx:id="tAbonnes" layoutX="75.0" layoutY="5.0" prefHeight="89.0" prefWidth="144.0">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="296.0" text="Button" />
                            </children>
                         </VBox>
-                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="73.0" prefWidth="379.0">
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="161.0" prefHeight="151.0" prefWidth="881.0">
+                     <children>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="151.0" prefWidth="293.0">
                            <children>
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                              <Label prefHeight="35.0" prefWidth="295.0" text="                     Total Utilisateurs" textAlignment="CENTER" />
+                              <AnchorPane prefHeight="84.0" prefWidth="293.0">
                                  <children>
-                                    <TextField layoutX="41.0" layoutY="23.0" prefHeight="31.0" prefWidth="210.0" promptText="exemple: 586.54 Mhz" />
-                                    <Button fx:id="rechBouton" layoutX="245.0" layoutY="23.0" mnemonicParsing="false" text="Rechercher" />
+                                    <Label fx:id="tUsers" layoutX="75.0" prefHeight="89.0" prefWidth="144.0">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button fx:id="desattrBouton" layoutX="137.0" layoutY="22.0" mnemonicParsing="false" onAction="#desattribuer" text="Désattribuer une fréquence" />
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </VBox>
+                              <Button mnemonicParsing="false" prefHeight="13.0" prefWidth="293.0" text="Button" />
+                           </children></VBox>
+                        <HBox prefHeight="151.0" prefWidth="589.0" />
                      </children>
                   </HBox>
                </children>
-            </AnchorPane>
+            </VBox>
          </center>
       </BorderPane>
    </children>

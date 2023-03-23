@@ -18,7 +18,7 @@
                   <Button fx:id="usersBouton" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
                   <Button fx:id="abonnesBouton" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
                   <Button fx:id="frequencesBouton" mnemonicParsing="false" onAction="#frequences" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
-                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="MATRICULES" />
+                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#parametres" prefHeight="83.0" prefWidth="220.0" text="PARAMETRES" />
                   <Button fx:id="deconnexionBouton" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
                </children>
             </VBox>
