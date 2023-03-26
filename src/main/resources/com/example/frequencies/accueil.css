@@ -1,6 +1,68 @@
+.root {
+    -fx-background-color: #2B2B2B;
+    -fx-font-family: "courrier New";
+}
 .round-box{
     -fx-background-radius: 100%;
     -fx-border-radius: 100%;
     -fx-border-width: 5px;
     -fx-background-color: #F3F3F3
 }
+#top, #left, #center, #bottom{
+    -fx-background-color: #2B2B2B;
+}
+#center {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #2B2B2B;
+}
+#center .button, .label, .text-field {
+    -fx-background-color: #3C3F41;
+    -fx-text-fill: #FFFFFF;
+}
+#center .button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+
+}
+#left {
+    -fx-background-color: #2B2B2B;
+    -fx-padding: 5;
+}
+#left .button{
+    -fx-background-color: #3C3F41;
+    -fx-background-radius: 0;
+    -fx-text-fill: #FFFFFF;
+}
+#left .button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+
+}
+#bloc {
+    -fx-padding: 5;
+}
+#case {
+    -fx-background-color: #3C3F41;
+    -fx-opacity: 0.9;
+}
+#case .button {
+    -fx-border-radius: 5;
+}
+#case:hover {
+
+    -fx-opacity: 0.6;
+}
+#numbers {
+    -fx-text-fill: #6897BB;
+}
+#caseInput{
+    -fx-background-color: #2B2B2B;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+}
+ #searchButton {
+     -fx-border-color: #FFFFFF;
+     -fx-background-color: #3C3F41;
+     -fx-border-radius: 5;
+ }
