@@ -1,0 +1,70 @@
+.root {
+    -fx-background-color: #F1F1F1;
+}
+.round-box{
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-border-width: 5px;
+    -fx-background-color: #F3F3F3
+}
+#top, #left, #center, #bottom{
+    -fx-background-color: #F1F1F1;
+}
+#center {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #F1F1F1;
+}
+#center .button, .label, .text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #216283;
+}
+#center .button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+
+}
+#left {
+    -fx-background-color: #F1F1F1;
+    -fx-padding: 5;
+}
+#left .button{
+    -fx-background-color: #216283;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-padding: 5;
+}
+#left .button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+    -fx-opacity: 0.6;
+
+}
+#bloc {
+    -fx-padding: 5;
+}
+#case {
+    -fx-background-color: #FFFFFF;
+    -fx-opacity: 0.9;
+}
+#case .button {
+    -fx-border-radius: 5;
+}
+#case:hover {
+
+    -fx-opacity: 0.6;
+}
+#numbers {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #6897BB;
+}
+#caseInput{
+    -fx-background-color: #F1F1F1;
+    -fx-border-color: #216283;
+    -fx-text-fill: #216283;
+    -fx-font-size: 13px;
+}
+ #searchButton {
+     -fx-border-color: #216283;
+     -fx-background-color: #FFFFFF;
+     -fx-border-radius: 5;
+ }

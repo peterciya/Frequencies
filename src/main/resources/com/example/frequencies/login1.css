@@ -1,10 +1,11 @@
-.root {
--fx-background-color: #2B2B2B;
+#anchor1 {
+-fx-background-color:#F1F1F1;
 }
 #anchor2 {
-    -fx-background-color:#3C3F41;
+    -fx-background-color: #FFFFFF;
     -fx-background-radius: 15;
-    -fx-opacity: 0.9;
+    -fx-opacity: 0.8;
+
 
 }
 .button {
@@ -12,7 +13,6 @@
     -fx-background-radius: 10;
     -fx-text-fill: white;
     -fx-font-size: 21px;
-    -fx-font-family: "Crimson";
 }.button:hover {
     -fx-text-fill: #C4D2E5;
     -fx-background-color: #216283;
@@ -23,26 +23,26 @@
     -fx-background-color: #214283;
 }
 .text-input {
-    -fx-background-color: #3C3F41;
-    -fx-border-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #3C3F41;
     -fx-border-radius: 10;
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: #3C3F41;
     -fx-font-size: 20px;
     -fx-background-opacity: 0.8;
 }
 .label {
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: #3E86A0;
     -fx-font-size: 13px;
 }
 #title {
     -fx-font-size: 37px;
 }
 #eyeButton {
-    -fx-background-color:#3C3F41;
+    -fx-background-color:#FFFFFF;
 }
 #eyeButton:hover {
-    -fx-background-color:#595B5D;
+    -fx-background-color:#F4F4F4;
 }
 #eyeButton:pressed {
-    -fx-background-color:#2B2B2B;
+    -fx-background-color:#E6E6E8;
 }

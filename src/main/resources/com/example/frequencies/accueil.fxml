@@ -12,7 +12,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="665.0" prefWidth="1101.0" stylesheets="@accueil.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Accueil">
+<AnchorPane prefHeight="665.0" prefWidth="1101.0" stylesheets="@accueil1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Accueil">
    <children>
       <BorderPane prefHeight="665.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -36,10 +36,10 @@
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="631.0" />
                         <AnchorPane layoutX="230.0" layoutY="10.0" prefHeight="79.0" prefWidth="262.0">
                            <children>
-                              <HBox layoutX="29.0" layoutY="37.0" prefHeight="40.0" prefWidth="200.0">
+                              <HBox layoutX="29.0" layoutY="32.0" prefHeight="45.0" prefWidth="200.0">
                                  <children>
-                                    <TextField prefHeight="39.0" prefWidth="156.0" promptText="Fréquence" />
-                                    <Button id="searchButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0">
+                                    <TextField fx:id="searchFrequencyField" onAction="#clic" prefHeight="39.0" prefWidth="150.0" promptText="Fréquence" />
+                                    <Button id="searchButton" fx:id="searchFrequencyButton" mnemonicParsing="false" onAction="#search" prefHeight="38.0" prefWidth="49.0">
                                        <graphic>
                                           <ImageView fitHeight="28.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -83,7 +83,7 @@
                                     <Font size="50.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="1.0" layoutY="117.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="293.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="117.0" />
+                              <Button fx:id="seeTotalFreqButton" layoutX="1.0" layoutY="117.0" mnemonicParsing="false" onAction="#clic" prefHeight="36.0" prefWidth="293.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="117.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane id="case" layoutX="10.0" layoutY="10.0" prefHeight="163.0" prefWidth="296.0">
@@ -94,7 +94,7 @@
                                     <Font size="50.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="1.0" layoutY="117.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="293.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="117.0" />
+                              <Button fx:id="seeTotalFreqAttButton" layoutX="1.0" layoutY="117.0" mnemonicParsing="false" onAction="#clic" prefHeight="36.0" prefWidth="293.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="117.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane id="case" layoutX="306.0" layoutY="10.0" prefHeight="163.0" prefWidth="296.0">
@@ -105,7 +105,8 @@
                                     <Font size="50.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="1.0" layoutY="117.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="293.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="117.0" />
+                              <Button fx:id="seeTotalFreqNonAttButton" layoutX="1.0" layoutY="117.0" mnemonicParsing="false" onAction="#clic" prefHeight="36.0" prefWidth="293.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="117.0" />
+                              <ListView id="listView" fx:id="searchListFreq" layoutX="67.0" layoutY="-51.0" prefHeight="120.0" prefWidth="197.0" style="-fx-background-radius: 10; -fx-border-color: #216283; -fx-border-radius: 10; -fx-border-width: 0.2; -fx-background-insets: 10;" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -120,12 +121,13 @@
                                     <Font size="50.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="1.0" layoutY="125.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="289.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="125.0" />
+                              <Button fx:id="seeTotalAbonnesButton" layoutX="1.0" layoutY="125.0" mnemonicParsing="false" onAction="#clic" prefHeight="32.0" prefWidth="289.0" text="Voir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="125.0" />
+                              <ListView id="listView" fx:id="listFreqT" layoutX="6.0" layoutY="-41.0" prefHeight="120.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #216283; -fx-border-radius: 10; -fx-border-width: 0.2; -fx-background-insets: 10;" />
                            </children>
                         </AnchorPane>
                         <AnchorPane id="case" prefHeight="152.0" prefWidth="294.0">
                            <children>
-                              <TextField id="caseInput" layoutX="35.0" layoutY="123.0" prefHeight="31.0" prefWidth="163.0" promptText=" Abonné" />
+                              <TextField id="caseInput" fx:id="searchAbonnesButton" layoutX="35.0" layoutY="123.0" prefHeight="31.0" prefWidth="163.0" promptText=" Abonné" />
                               <Button id="searchButton" layoutX="193.0" layoutY="122.0" mnemonicParsing="false">
                                  <graphic>
                                     <ImageView id="searchButton" fitHeight="21.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
@@ -135,12 +137,14 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
+                              <ListView id="listView" fx:id="listFreqAtt" layoutX="5.0" layoutY="-42.0" prefHeight="120.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #216283; -fx-border-radius: 10; -fx-border-width: 0.2; -fx-background-insets: 10;" />
                            </children>
                         </AnchorPane>
                         <AnchorPane id="case" prefHeight="155.0" prefWidth="294.0">
                            <children>
-                              <TextField id="caseInput" layoutX="66.0" layoutY="124.0" prefHeight="31.0" prefWidth="163.0" promptText="Utilisateur" />
-                              <Button id="searchButton" layoutX="219.0" layoutY="124.0" mnemonicParsing="false">
+                              <ListView id="listView" fx:id="listFreqNonAtt" layoutX="5.0" layoutY="-42.0" prefHeight="120.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #216283; -fx-border-radius: 10; -fx-border-width: 0.2; -fx-background-insets: 10;" />
+                              <TextField id="caseInput" fx:id="searchUsersButton" layoutX="66.0" layoutY="124.0" prefHeight="31.0" prefWidth="163.0" promptText="Utilisateur" />
+                              <Button id="searchButton" layoutX="219.0" layoutY="123.0" mnemonicParsing="false">
                                  <graphic>
                                     <ImageView fitHeight="21.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -158,22 +162,22 @@
                         <AnchorPane id="case" prefHeight="163.0" prefWidth="296.0">
                            <children>
                               <Label alignment="CENTER" layoutX="88.0" prefHeight="40.0" prefWidth="120.0" text=" Total Utilisateurs" textAlignment="CENTER" />
-                              <Button layoutX="1.0" layoutY="127.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="287.0" text="Voir" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="127.0" />
                               <Label id="numbers" fx:id="tUsers" alignment="CENTER" layoutX="91.0" layoutY="44.0" prefHeight="74.0" prefWidth="107.0" style="-fx-alignment: center;" textAlignment="RIGHT">
                                  <font>
                                     <Font size="50.0" />
                                  </font>
                               </Label>
+                              <ListView id="listView" fx:id="listAbonnes" layoutX="5.0" layoutY="-38.0" prefHeight="120.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #216283; -fx-border-radius: 10; -fx-border-width: 0.2; -fx-background-insets: 10;" />
                            </children>
                         </AnchorPane>
                         <AnchorPane id="case" prefHeight="163.0" prefWidth="296.0">
                            <children>
-                              <Button layoutX="54.0" layoutY="130.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="290.0" text="Attribuer Fréquence" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0" />
+                              <Button fx:id="attributionButton" layoutX="54.0" layoutY="130.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="290.0" text="Attribuer Fréquence" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane id="case" prefHeight="163.0" prefWidth="296.0">
                            <children>
-                              <Button layoutX="57.0" layoutY="127.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="291.0" text="Désactiver Fréquence" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="127.0" />
+                              <Button fx:id="disableButton" layoutX="57.0" layoutY="127.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="291.0" text="Désactiver Fréquence" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="127.0" />
                            </children>
                         </AnchorPane>
                      </children>

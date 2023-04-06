@@ -75,5 +75,18 @@ public class Main extends Application {
         ajoutObjet.showAndWait();
 
     }
+    public  void showResult() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Main.class.getResource("result.fxml"));
+        AnchorPane pane = fxmlLoader.load();
+        Stage result = new Stage();
+        result.setTitle("Résultat");
+        result.setResizable(false);
+        result.initModality(Modality.WINDOW_MODAL);
+        result.initOwner(stg);
+        Scene scene = new Scene(pane);
+        result.setScene(scene);
+        result.show();
+    }
     public static void main(String[] args) {launch();}
 }

@@ -14,7 +14,6 @@ public class Abonne {
         this.telephone = telephone;
         this.email = email;
         this.adresse = adresse;
-        this.id_frequence = id_frequence;
     }
 
     public int getId() {
@@ -37,7 +36,4 @@ public class Abonne {
         return adresse;
     }
 
-    public int getId_frequence() {
-        return id_frequence;
-    }
 }

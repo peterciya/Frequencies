@@ -39,6 +39,18 @@ public class Frequence {
         return dateAjout;
     }
 
+    @Override
+    public String toString() {
+        return "Frequence{" +
+                "id=" + id +
+                ", frequence=" + frequence +
+                ", dateAjout=" + dateAjout +
+                ", etat=" + etat +
+                ", idAbonne=" + idAbonne +
+                ", idUser=" + idUser +
+                '}';
+    }
+
     public void setDateAjout(Date dateAjout) {
         this.dateAjout = dateAjout;
     }

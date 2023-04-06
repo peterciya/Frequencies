@@ -1,6 +1,5 @@
 .root {
     -fx-background-color: #2B2B2B;
-    -fx-font-family: "courrier New";
 }
 .round-box{
     -fx-background-radius: 100%;
@@ -52,6 +51,20 @@
 
     -fx-opacity: 0.6;
 }
+#listView {
+    -fx-background-color: #3C3F41;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.list-cell .corner{
+    -fx-background-radius: 7px 7px 0px 0px;
+    }
+.list-cell: odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
 #numbers {
     -fx-text-fill: #6897BB;
 }
@@ -66,3 +79,17 @@
      -fx-background-color: #3C3F41;
      -fx-border-radius: 5;
  }
+ .list-cell:filled:selected:focused, .list-cell:filled:selected {
+       -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+       -fx-text-fill: white;
+   }
+
+   .list-cell:odd {
+       -fx-cell-hover-color: #0093ff;
+       -fx-background-color: white;
+   }
+
+   .list-cell:filled:hover {
+       -fx-cell-hover-color: #0093ff;
+       -fx-text-fill: white;
+   }

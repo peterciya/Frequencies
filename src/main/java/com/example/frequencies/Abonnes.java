@@ -83,7 +83,7 @@ public class Abonnes implements Initializable {
         ajoutAbonne = fxmlLoader.getController();
         ajoutAbonne.setUpdate(true);
         ajoutAbonne.setTextFields(abonne.getId(), abonne.getDenomination(), abonne.getTelephone(), abonne.getEmail(),
-                abonne.getAdresse(), abonne.getId_frequence());
+                abonne.getAdresse());
 
         Parent parent = fxmlLoader.getRoot();
         Stage stage = new Stage();

@@ -3,7 +3,6 @@ package com.example.frequencies;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -23,13 +22,13 @@ public class AjoutAbonne {
     String query;
     boolean update = false;
     int abonneId;
-    public void setTextFields(int id, String denomination, String telephone, String email, String adresse, int frequence){
+    public void setTextFields(int id, String denomination, String telephone, String email, String adresse){
         this.abonneId = id;
         denominationTextField.setText(denomination);
         phoneTextField.setText(telephone);
         emailTextField.setText(email);
         adresseTextField.setText(adresse);
-        frequenceTextField.setText(String.valueOf(frequence));
+        //frequenceTextField.setText(String.valueOf(frequence));
     }
     public void setUpdate(Boolean update){this.update = update;}
     private void vider(){
