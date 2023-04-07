@@ -2,14 +2,20 @@ package com.example.frequencies;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Result {
     @FXML
-    Label id, frequence, date, etat, idAbonne, idUser;
+    Label id, frequence, date, etat, idAbonne, idUser, info;
+    @FXML
+    Button okButton;
+
     Accueil accueil;
     User user;
     Abonne abonne;
@@ -21,6 +27,13 @@ public class Result {
         this.etat.setText(etat);
         this.idAbonne.setText(idAbonne);
         this.idUser.setText(idUser);
+    }
+    public void setInfo(){
+        if (Integer.parseInt(this.etat.getText()) < 1){
+            info.setText("Cette fréquence n'est pas encore attribuée!");
+        } else {
+            info.setText("Cette fréquence est déjà attribuée!");
+        }
     }
 
     public Label getEtat() {

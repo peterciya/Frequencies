@@ -2,13 +2,17 @@ package com.example.frequencies;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Main extends Application {
     private static Stage stg;
@@ -74,19 +78,6 @@ public class Main extends Application {
         ajoutObjet.setScene(scene);
         ajoutObjet.showAndWait();
 
-    }
-    public  void showResult() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Main.class.getResource("result.fxml"));
-        AnchorPane pane = fxmlLoader.load();
-        Stage result = new Stage();
-        result.setTitle("Résultat");
-        result.setResizable(false);
-        result.initModality(Modality.WINDOW_MODAL);
-        result.initOwner(stg);
-        Scene scene = new Scene(pane);
-        result.setScene(scene);
-        result.show();
     }
     public static void main(String[] args) {launch();}
 }

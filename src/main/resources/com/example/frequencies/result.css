@@ -1,0 +1,35 @@
+#anchor1 {
+-fx-background-color:#F1F1F1;
+}
+#box {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15;
+    -fx-opacity: 0.8;
+
+}
+.button {
+    -fx-background-color: #82AFC0;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}.button:hover {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #216283;
+
+}
+}.button:pressed {
+    -fx-text-fill: #C4D2E5;
+    -fx-background-color: #214283;
+}
+.label {
+    -fx-text-fill: #82AFC0;
+    -fx-font-weight: bold;
+}
+#title {
+    -fx-background-color: #82AFC0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Book Antiqua";
+    -fx-font-size: 17;
+    -fx-padding: 3;
+}

@@ -11,8 +11,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
 import java.io.IOException;
 import java.net.URL;
@@ -60,6 +62,7 @@ public class Accueil implements Initializable {
     Frequence frequence;
     Frequence frequence1;
     Result result;
+    Stage stage;
 
     Abonne abonne;
     Abonne abonne1;
@@ -182,7 +185,6 @@ public class Accueil implements Initializable {
         listAbonnes.setOnMouseEntered(mouseEvent -> {listAbonnes.setVisible(true);});
         listAbonnes.setOnMouseExited(mouseEvent -> {listAbonnes.setVisible(false);});
         searchListFreq.setOnMouseEntered(mouseEvent -> searchListFreq.setVisible(true));
-        searchListFreq.setOnMouseExited(mouseEvent -> searchListFreq.setVisible(false));
         searchListFreq.setOnMouseClicked(mouseEvent -> searchFrequencyField.setText(searchListFreq.getSelectionModel().getSelectedItem()));
         searchListFreq.setOnMouseExited(mouseEvent -> searchListFreq.setVisible(true));
         searchFrequencyButton.setOnMouseClicked(mouseEvent -> searchListFreq.setVisible(false));
@@ -228,13 +230,16 @@ public class Accueil implements Initializable {
                 Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
             }
             result = fxmlLoader.getController();
-            result.setLabels(String.valueOf(frequence1.getId()), String.valueOf(frequence1.getFrequence()), String.valueOf(frequence1.getDateAjout()),
-                    String.valueOf(frequence1.getEtat()), String.valueOf(frequence1.getIdAbonne()),String.valueOf(frequence1.getIdUser()));
+            result.setLabels(String.valueOf(frequence1.getId()), String.valueOf(frequence1.getFrequence()),
+                        String.valueOf(frequence1.getDateAjout()), String.valueOf(frequence1.getEtat()),
+                        String.valueOf(frequence1.getIdAbonne()), String.valueOf(frequence1.getIdUser()));
+            result.setInfo();
             Parent parent = fxmlLoader.getRoot();
-            Stage stage = new Stage();
+            stage = new Stage();
             stage.setScene(new Scene(parent));
             stage.initStyle(StageStyle.UTILITY);
-            stage.show();
+            stage.showAndWait();
+            result.okButton.setOnMouseClicked(mouseEvent -> stage.close());
         }
     }
     public void accueil(ActionEvent event)throws IOException{
@@ -269,5 +274,7 @@ public class Accueil implements Initializable {
         }
         displayList();
         searchFrequencyField.setOnMouseClicked(mouseEvent -> searchListFreq.setVisible(true));
+        searchFrequencyField.setOnMouseExited(mouseEvent -> searchListFreq.setVisible(false));
+        searchListFreq.setOnMouseExited(mouseEvent -> searchListFreq.setVisible(false));
     }
 }
