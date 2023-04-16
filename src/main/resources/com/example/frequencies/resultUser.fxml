@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="550.0" stylesheets="@result.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.ResultUser">
+   <children>
+      <VBox id="box" layoutX="23.0" layoutY="39.0" prefHeight="282.0" prefWidth="504.0">
+         <children>
+            <AnchorPane id="anchor" prefHeight="60.0" prefWidth="373.0" style="-fx-background-radius: 15,15, 0, 0;">
+               <children>
+                  <Label id="title" fx:id="info" alignment="CENTER" contentDisplay="CENTER" layoutY="-4.0" prefHeight="26.0" prefWidth="504.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="anchor" prefHeight="267.0" prefWidth="504.0">
+               <children>
+                  <HBox layoutY="-2.0" prefHeight="126.0" prefWidth="373.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                     <children>
+                        <VBox prefHeight="293.0" prefWidth="236.0">
+                           <children>
+                              <AnchorPane prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Id : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Nom : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Prenom : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Matricule : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Sexe : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Téléphone : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Email : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="150.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Adresse : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="201.0" prefHeight="81.0" prefWidth="226.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="226.0" text="Total freq attribuées : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="293.0" prefWidth="236.0">
+                           <children>
+                              <AnchorPane prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="id" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="nom" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="71.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="prenom" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="132.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="matricule" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="193.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="sexe" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="244.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="telephone" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="mail" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="154.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="adresse" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="201.0" prefHeight="61.0" prefWidth="226.0">
+                                 <children>
+                                    <Label fx:id="nbFreq" contentDisplay="CENTER" layoutX="86.0" layoutY="28.0" prefHeight="77.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="anchor" prefHeight="97.0" prefWidth="504.0">
+               <children>
+                  <Button fx:id="okButton" layoutX="187.0" layoutY="6.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" text="OK" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

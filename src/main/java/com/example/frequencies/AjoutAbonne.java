@@ -62,10 +62,10 @@ public class AjoutAbonne {
                 messageTextField.setText("Réseau téléphonique incorrect.");
             }  else {
                 if (update == false){
-                    query = "INSERT INTO `abonnes` (`denomination`, `telephone`, `email`, `adresse`, `frequence`) VALUE(?,?,?,?,?)";
+                    query = "INSERT INTO `abonnes` (`denomination`, `telephone`, `email`, `adresse`) VALUE(?,?,?,?)";
                 }else {
-                    query ="UPDATE `abonnes` SET `denomination` = ?,`telephone` = ?, `email` = ?,`adresse` = ?," +
-                            "`mdp` = ?, `frequence` = ? WHERE `abonnes`.`id` ="+abonneId+"";
+                    query = "UPDATE `abonnes` SET `denomination` = ?,`telephone` = ?, `email` = ?,`adresse` = ?," +
+                            "`mdp` = ? WHERE `abonnes`.`id` ="+abonneId+"";
                 }
 
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -73,7 +73,6 @@ public class AjoutAbonne {
                 preparedStatement.setString(5, phoneTextField.getText());
                 preparedStatement.setString(6, emailTextField.getText());
                 preparedStatement.setString(7, adresseTextField.getText());
-                preparedStatement.setInt(2, Integer.parseInt(frequenceTextField.getText()));
                 preparedStatement.execute();
                 this.vider();
 

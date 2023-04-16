@@ -21,7 +21,6 @@ public class Main extends Application {
         stg = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-         //scene.getStylesheets().add(getClass().getResource("login.css").toExternalForm());
         stg.setTitle("Frequencies");
         stg.setResizable(false);
         stg.setScene(scene);
@@ -78,6 +77,19 @@ public class Main extends Application {
         ajoutObjet.setScene(scene);
         ajoutObjet.showAndWait();
 
+    }
+    public void showAttribution() throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Main.class.getResource("attribuer.fxml"));
+        AnchorPane anchorPane = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Attribution");
+        stage.setResizable(false);
+        stage.initModality(Modality.NONE);
+        stage.initOwner(stg);
+        Scene scene = new Scene(anchorPane);
+        stage.setScene(scene);
+        stage.show();
     }
     public static void main(String[] args) {launch();}
 }

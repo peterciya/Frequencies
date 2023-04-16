@@ -25,8 +25,8 @@ public class AjoutFrequence{
     Main main = new Main();
 
     public void ajouter(ActionEvent event) throws IOException, SQLException {
-        if (Double.parseDouble(frequenceTextField.getText()) < 70.0 & Double.parseDouble(frequenceTextField.getText()) > 499.99){
-            this.messageTextField.setText("Entrez une fréquence qui soit comprise entre 70.0 499.99 Mhz.");
+        if (Double.parseDouble(frequenceTextField.getText()) < 3000.0 & Double.parseDouble(frequenceTextField.getText()) >= 30.0){
+            this.messageTextField.setText("Entrez une fréquence qui soit comprise entre 30 et 3000 Mhz.");
         } else {
             query = "INSERT INTO `users` ()";
             statement = connection.prepareStatement(query);

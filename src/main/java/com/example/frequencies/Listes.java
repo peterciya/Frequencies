@@ -34,10 +34,8 @@ public class Listes implements Initializable {
                 frequence = new Frequence(
                         resultSet.getInt("id"),
                         resultSet.getDouble("frequence"),
-                        resultSet.getDate("dateAjout"),
-                        resultSet.getInt("etat"),
-                        resultSet.getInt("idAbonne"),
-                        resultSet.getInt("idUser"));
+                        resultSet.getInt("canal"),
+                        resultSet.getInt("etat"));
                 frequencies.add(String.valueOf(frequence.getFrequence()));
             }
             freqList.setItems(frequencies);

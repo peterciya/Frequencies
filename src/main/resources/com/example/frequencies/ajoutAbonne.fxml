@@ -23,7 +23,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
                     <children>
-                        <TextField fx:id="denominationTextField" layoutX="47.0" layoutY="17.0" prefHeight="31.0" prefWidth="140.0" promptText="ex: RTLJ" />
+                        <TextField fx:id="denominationTextField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="178.0" promptText="ex: RTLJ" />
                     </children>
                 </AnchorPane>
             </children>
@@ -37,7 +37,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
                     <children>
-                        <TextField fx:id="phoneTextField" layoutX="47.0" layoutY="17.0" prefHeight="31.0" prefWidth="140.0" promptText="ex: 0972552492" />
+                        <TextField fx:id="phoneTextField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="178.0" promptText="ex: 0972552492" />
                     </children>
                 </AnchorPane>
             </children>
@@ -51,7 +51,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
                     <children>
-                        <TextField fx:id="emailTextField" layoutX="8.0" layoutY="17.0" prefHeight="31.0" prefWidth="178.0" promptText="consolate@gmail.com" />
+                        <TextField fx:id="emailTextField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="178.0" promptText="consolate@gmail.com" />
                     </children>
                 </AnchorPane>
             </children>
@@ -65,7 +65,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="240.0">
                     <children>
-                        <TextField fx:id="adresseTextField" layoutX="8.0" layoutY="17.0" prefHeight="31.0" prefWidth="178.0" promptText="ex: Bel Air, Lubumbashi" />
+                        <TextField fx:id="adresseTextField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="178.0" promptText="ex: Bel Air, Lubumbashi" />
                     </children>
                 </AnchorPane>
             </children>
@@ -79,7 +79,7 @@
             </AnchorPane>
             <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="246.0">
                <children>
-                  <TextField fx:id="frequenceTextField" layoutY="24.0" prefHeight="31.0" prefWidth="178.0" promptText="586.74 Mhz" />
+                  <TextField fx:id="frequenceTextField" layoutX="8.0" layoutY="24.0" prefHeight="31.0" prefWidth="178.0" promptText="586.74 Mhz" />
                </children>
             </AnchorPane>
          </children>
@@ -88,7 +88,7 @@
             <children>
                 <AnchorPane prefHeight="65.0" prefWidth="499.0">
                     <children>
-                        <TextField fx:id="messageTextField" layoutX="115.0" layoutY="12.0" onAction="#ajouter" prefHeight="31.0" prefWidth="277.0" />
+                        <TextField fx:id="messageTextField" layoutX="66.0" layoutY="16.0" onAction="#ajouter" prefHeight="31.0" prefWidth="367.0" />
                     </children>
                 </AnchorPane>
             </children>

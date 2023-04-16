@@ -1,5 +1,7 @@
 package com.example.frequencies;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,13 +24,14 @@ public class AjoutUser implements Initializable {
     @FXML
     PasswordField passwordField1, passwordField2;
     @FXML
-    ChoiceBox <String> sexeChoiceBox, matriculeChoiceBox;
+    ChoiceBox <String> sexeChoiceBox;
+    ChoiceBox<String> matriculeChoiceBox;
     String query;
     DataBaseConnection dbConnection = new DataBaseConnection();
     Connection connection = dbConnection.getConnection();
 
-    private String[] sexes = {"Masculin","Féminin"};
-    private String[] matricules = {"17kk208","17kk105","18CI200","19kk19"};
+    ObservableList<String> listsex = FXCollections.observableArrayList("Masculin","Féminin");
+    ObservableList<String> listmat = FXCollections.observableArrayList("17kk208","17kk105","18CI200","19kk19");
     boolean update = false;
     int userId;
     @FXML
@@ -117,7 +120,8 @@ public class AjoutUser implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        sexeChoiceBox.getItems().addAll(sexes);
-        matriculeChoiceBox.getItems().addAll(matricules);
+        sexeChoiceBox.setItems(listsex);
+        matriculeChoiceBox.setItems(listmat);
+
     }
 }

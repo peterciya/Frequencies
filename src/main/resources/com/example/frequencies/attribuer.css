@@ -29,13 +29,12 @@
     -fx-background-color: #FFFFFF;
     -fx-text-fill: #216283;
     -fx-size: 15px;
-    -fx-font-weight: bold;
     -fx-opacity: 0.5;
 
 }
-#att:hover {
+#att:hover, #att:pressed {
     -fx-opacity: 1;
-    -fx-text-fill: #216283;
+    -fx-text-fill: #902C29;
 
 }
 .label {

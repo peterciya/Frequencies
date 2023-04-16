@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="665.0" prefWidth="1101.0" stylesheets="@utilisateurs.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Users">
+<AnchorPane prefHeight="665.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Users">
     <children>
         <BorderPane prefHeight="665.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <left>
@@ -19,7 +19,7 @@
                         <Button fx:id="usersBouton" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
                         <Button fx:id="abonnesBouton" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
                         <Button fx:id="frequencesBouton" mnemonicParsing="false" onAction="#frequences" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
-                        <Button fx:id="parametresBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="PARAMETRES" />
+                        <Button fx:id="parametresBouton" mnemonicParsing="false" onAction="#matricules" prefHeight="83.0" prefWidth="220.0" text="OPERATIONS" />
                         <Button fx:id="deconnexionBouton" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
                     </children>
                 </VBox>
@@ -27,7 +27,7 @@
             <top>
                 <VBox prefHeight="114.0" prefWidth="1101.0" BorderPane.alignment="CENTER">
                     <children>
-                        <HBox prefHeight="113.0" prefWidth="1101.0" stylesheets="@utilisateurs.css">
+                        <HBox prefHeight="113.0" prefWidth="1101.0">
                             <children>
                                 <AnchorPane prefHeight="79.0" prefWidth="220.0" />
                                 <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="79.0" prefWidth="631.0" />

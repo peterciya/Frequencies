@@ -19,7 +19,7 @@ public class Parametres {
         main.changeScene("frequences.fxml");
     }
     public void matricules(ActionEvent event)throws IOException{
-        main.changeScene("parametres.fxml");
+        main.changeScene("operations.fxml");
     }
     public void deconnexion(ActionEvent event)throws IOException{
         main.changeScene("login.fxml");

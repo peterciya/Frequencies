@@ -8,17 +8,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="665.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Frequences">
+<AnchorPane prefHeight="665.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.Operations">
    <children>
       <BorderPane prefHeight="665.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <VBox prefHeight="564.0" prefWidth="220.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="profileBouton" mnemonicParsing="false" onAction="#profile" prefHeight="83.0" prefWidth="220.0" text="PROFILE" />
+                  <Button fx:id="profileBouton" mnemonicParsing="false" onAction="#accueil" prefHeight="83.0" prefWidth="220.0" text="PROFILE" />
                   <Button fx:id="usersBouton" mnemonicParsing="false" onAction="#users" prefHeight="83.0" prefWidth="220.0" text="UTILISATEURS" />
                   <Button fx:id="abonnesBouton" mnemonicParsing="false" onAction="#abonnes" prefHeight="83.0" prefWidth="220.0" text="ABONNES" />
                   <Button fx:id="frequencesBouton" mnemonicParsing="false" onAction="#frequences" prefHeight="83.0" prefWidth="220.0" text="FREQUENCES" />
-                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#parametres" prefHeight="83.0" prefWidth="220.0" text="PARAMETRES" />
+                  <Button fx:id="matriculesBouton" mnemonicParsing="false" onAction="#operations" prefHeight="83.0" prefWidth="220.0" text="PARAMETRES" />
                   <Button fx:id="deconnexionBouton" mnemonicParsing="false" onAction="#deconnexion" prefHeight="83.0" prefWidth="220.0" text="SE DECONNECTER" />
                </children>
             </VBox>
@@ -41,12 +41,14 @@
                <children>
                   <AnchorPane prefHeight="484.0" prefWidth="881.0">
                      <children>
-                        <TableView fx:id="frequences" layoutX="8.0" prefHeight="383.0" prefWidth="851.0">
+                        <TableView fx:id="operations" layoutX="8.0" prefHeight="383.0" prefWidth="851.0">
                            <columns>
-                              <TableColumn fx:id="idColumn" minWidth="8.0" prefWidth="123.0" text="ID" />
-                              <TableColumn fx:id="frequenceColumn" minWidth="0.0" prefWidth="267.0" text="FREQUENCE" />
-                              <TableColumn fx:id="canalColumn" minWidth="0.0" prefWidth="280.0" text="CANAL" />
-                              <TableColumn fx:id="etatColumn" prefWidth="180.0" text="ETAT" />
+                              <TableColumn fx:id="idColumn" minWidth="8.0" prefWidth="84.0" text="ID" />
+                              <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="159.0" text="TYPE" />
+                              <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="136.0" text="DATE" />
+                              <TableColumn fx:id="idUserColumn" minWidth="0.0" prefWidth="126.0" text="ID_USER" />
+                              <TableColumn fx:id="idAbonneColumn" prefWidth="184.0" text="ID_ABONNE" />
+                              <TableColumn fx:id="idFrequenceColumn" prefWidth="184.0" text="ID_FREQUENCE" />
                            </columns>
                         </TableView>
                      </children>

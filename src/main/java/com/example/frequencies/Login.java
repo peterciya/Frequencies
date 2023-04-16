@@ -27,6 +27,13 @@ public class Login implements Initializable {
     @FXML Button validerBouton, eyeButton, eyeButton1;
     @FXML
     Label warningLabel;
+    User user;
+
+    public static User getUserOnline() {
+        return userOnline;
+    }
+
+    static User userOnline;
 
 
     private void hide(){
@@ -40,7 +47,7 @@ public class Login implements Initializable {
         DataBaseConnection dbconnection = new DataBaseConnection();
         Connection connection = dbconnection.getConnection();
 
-        String myQuery = "SELECT matricule, mdp FROM users";
+        String myQuery = "SELECT * FROM users";
 
         try {
             Statement statement = connection.createStatement();
@@ -48,20 +55,29 @@ public class Login implements Initializable {
             System.out.println("OK");
 
             while (resultSet.next()) {
-                String resultSetLogin = resultSet.getString("matricule");
-                String resultSetPwd = resultSet.getString("mdp");
+                user = new User(
+                        resultSet.getInt("id"),
+                        resultSet.getString("prenom"),
+                        resultSet.getString("nom"),
+                        resultSet.getString("matricule"),
+                        resultSet.getString("sexe"),
+                        resultSet.getString("telephone"),
+                        resultSet.getString("email"),
+                        resultSet.getString("adresse"),
+                        resultSet.getString("mdp"));
 
                 if((loginTextField.getText().toString()).isEmpty() || (passField.getText().toString()).isEmpty()){
                     warningLabel.setText("Veuillez remplir tous les champs.");
                     warningLabel.setTextFill(Paint.valueOf("#FF4141"));
                 }
-                else if(!(loginTextField.getText().toString().equals(resultSetLogin))
-                        || !(passField.getText().toString().equals(resultSetPwd))){
+                else if(!(loginTextField.getText().toString().equals(user.getMatricule()))
+                        || !(passField.getText().toString().equals(user.getMdp()))){
                     warningLabel.setText("Login ou mot de passe invalide!");
                     warningLabel.setTextFill(Paint.valueOf("#FF4141"));
 
                 }
                 else {
+                    userOnline = this.user;
                     main.changeScene("accueil.fxml");
                 }
             }
@@ -70,6 +86,9 @@ public class Login implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void printNewUser(){
+        System.out.println(userOnline.getId());
     }
 
     @Override
