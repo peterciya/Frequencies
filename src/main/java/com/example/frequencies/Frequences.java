@@ -44,7 +44,7 @@ public class Frequences implements Initializable {
     public void frequences(ActionEvent event) throws IOException{
         main.changeScene("frequences.fxml");
     }
-    public void parametres(ActionEvent event) throws IOException{
+    public void operations(ActionEvent event) throws IOException{
         main.changeScene("operations.fxml");
     }
     public void deconnexion(ActionEvent event) throws IOException{

@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -20,18 +19,14 @@ import java.util.ResourceBundle;
 
 public class AjoutUser implements Initializable {
     @FXML
-    TextField prenomTextField, nomTextField, phoneTextField, emailTextField, adresseTextField, messageTextField;
-    @FXML
-    PasswordField passwordField1, passwordField2;
+    TextField prenomTextField, nomTextField, phoneTextField, emailTextField, adresseTextField, messageTextField,passwordField1, passwordField2, matriculeTextField;
     @FXML
     ChoiceBox <String> sexeChoiceBox;
-    ChoiceBox<String> matriculeChoiceBox;
     String query;
     DataBaseConnection dbConnection = new DataBaseConnection();
     Connection connection = dbConnection.getConnection();
 
     ObservableList<String> listsex = FXCollections.observableArrayList("Masculin","Féminin");
-    ObservableList<String> listmat = FXCollections.observableArrayList("17kk208","17kk105","18CI200","19kk19");
     boolean update = false;
     int userId;
     @FXML
@@ -47,7 +42,7 @@ public class AjoutUser implements Initializable {
         passwordField1.setText(pass);
         passwordField2.setText(pass);
         messageTextField.setText("");
-        matriculeChoiceBox.setValue(matricule);
+        matriculeTextField.setText(matricule);
         sexeChoiceBox.setValue(sexe);
     }
     public void setUpdate(Boolean update){
@@ -62,7 +57,7 @@ public class AjoutUser implements Initializable {
         passwordField1.setText("");
         passwordField2.setText("");
         messageTextField.setText("");
-        matriculeChoiceBox.setValue("");
+        matriculeTextField.setText("");
         sexeChoiceBox.setValue("");
     }
     public void nettoyer(ActionEvent event)throws IOException{
@@ -104,7 +99,7 @@ public class AjoutUser implements Initializable {
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 preparedStatement.setString(1, prenomTextField.getText());
                 preparedStatement.setString(2, nomTextField.getText());
-                preparedStatement.setString(3, matriculeChoiceBox.getValue());
+                preparedStatement.setString(3, matriculeTextField.getText());
                 preparedStatement.setString(4, sexeChoiceBox.getValue());
                 preparedStatement.setString(5, phoneTextField.getText());
                 preparedStatement.setString(6, emailTextField.getText());
@@ -121,7 +116,5 @@ public class AjoutUser implements Initializable {
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sexeChoiceBox.setItems(listsex);
-        matriculeChoiceBox.setItems(listmat);
-
     }
 }

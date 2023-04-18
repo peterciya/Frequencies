@@ -259,17 +259,19 @@ public class Accueil implements Initializable {
                 alert.show();
             } else {
                 for (int i = 0, q = frequencies.size(); i < q; i++){
-                   if ((searchUsersField.getText()).equals(frequencies.get(i).getId())){
+                   if (Double.valueOf(searchFrequencyField.getText()).equals(frequencies.get(i).getFrequence())){
                        frequence1 = frequencies.get(i);
                        for (int j = 0, r = operations.size(); j < r; j++){
                            if (operations.get(j).getIdFrequence() == frequence1.getId()){
                                operation = operations.get(j);
                                for (int k = 0, s = abonnees.size() ; k < s; k++){
-                                   abonne1 = abonnees.get(k);
+                                   if (frequence1.getEtat() > 0 & (operation.getIdAbonne() == abonnees.get(k).getId())){
+                                       abonne1 = abonnees.get(k);
+                                   }
                                }
                                for (int l = 0, t = arrayusers.size(); l < t; l++){
                                    if (operation.getIdUser() == arrayusers.get(l).getId()) {
-                                       user1 = arrayusers.get(i);
+                                       user1 = arrayusers.get(l);
                                    }
                                }
                            }
@@ -285,10 +287,18 @@ public class Accueil implements Initializable {
                     Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
                 }
                 resultFreq = fxmlLoader.getController();
-                resultFreq.setLabels(String.valueOf(frequence1.getId()), String.valueOf(frequence1.getFrequence()),
-                        String.valueOf(frequence1.getCanal()), String.valueOf(operation.getDate()),
-                        String.valueOf(frequence1.getEtat()), String.valueOf(abonne1.getDenomination()),
-                        (user1.getPrenom() + user1.getNom()));
+                if ( frequence1.getEtat() > 0){
+                    resultFreq.setLabels(String.valueOf(frequence1.getId()), String.valueOf(frequence1.getFrequence()),
+                            String.valueOf(frequence1.getCanal()), String.valueOf(operation.getDate()),
+                            String.valueOf(frequence1.getEtat()), String.valueOf(abonne1.getDenomination()),
+                            (user1.getPrenom() + " "+ user1.getNom()));
+                } else {
+                    resultFreq.setLabels(String.valueOf(frequence1.getId()), String.valueOf(frequence1.getFrequence()),
+                            String.valueOf(frequence1.getCanal()), String.valueOf(operation.getDate()),
+                            String.valueOf(frequence1.getEtat()), ("Aucune"),
+                            (user1.getPrenom() + " "+ user1.getNom()));
+                }
+
                 resultFreq.setInfoFrequence();
                 Parent parent = fxmlLoader.getRoot();
                 Stage stage = new Stage();
@@ -411,7 +421,7 @@ public class Accueil implements Initializable {
     public void frequence(ActionEvent event)throws IOException{
         main.changeScene("frequences.fxml");
     }
-    public void matricules(ActionEvent event)throws IOException{
+    public void operations(ActionEvent event)throws IOException{
         main.changeScene("operations.fxml");
     }
     public void deconnexion(ActionEvent event)throws IOException{

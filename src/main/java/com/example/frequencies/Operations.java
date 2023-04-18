@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 
 public class Operations implements Initializable {
     @FXML
-    Button profileBouton, usersBouton, abonnesBouton, frequencesBouton, deconnexionBouton, ajouterBouton, deleteBouton, refreshBouton, editBouton;
+    Button profileBouton, usersBouton, abonnesBouton, frequencesBouton, deconnexionBouton, ajouterBouton, deleteBouton, refreshBouton, editBouton, operationsBouton;
     @FXML
     TableView<Operation> operations;
     @FXML
