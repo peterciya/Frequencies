@@ -42,7 +42,7 @@
                     <children>
                         <AnchorPane prefHeight="484.0" prefWidth="881.0">
                             <children>
-                                <TableView fx:id="users" layoutX="6.0" prefHeight="383.0" prefWidth="861.0" style="-fx-background-color: 3C7D94;">
+                                <TableView fx:id="users" layoutX="6.0" prefHeight="383.0" prefWidth="861.0">
                                     <columns>
                                         <TableColumn fx:id="idColumn" prefWidth="51.0" text="ID" />
                                         <TableColumn fx:id="prenomColumn" prefWidth="92.0" text="PRENOM" />

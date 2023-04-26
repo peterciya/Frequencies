@@ -14,7 +14,9 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class AjoutUser implements Initializable {
@@ -22,8 +24,10 @@ public class AjoutUser implements Initializable {
     TextField prenomTextField, nomTextField, phoneTextField, emailTextField, adresseTextField, messageTextField,passwordField1, passwordField2, matriculeTextField;
     @FXML
     ChoiceBox <String> sexeChoiceBox;
-    String query;
+    String query, query1, type;
+
     DataBaseConnection dbConnection = new DataBaseConnection();
+    Operation operation;
     Connection connection = dbConnection.getConnection();
 
     ObservableList<String> listsex = FXCollections.observableArrayList("Masculin","Féminin");
@@ -88,15 +92,19 @@ public class AjoutUser implements Initializable {
                 messageTextField.setText("Réseau téléphonique incorrect.");
             }
             else {
+                connection.setAutoCommit(false);
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+
                 if (update == false){
                     query = "INSERT INTO `users` (`prenom`, `nom`, `matricule`, `sexe`, `telephone`, `email`, `adresse`,`mdp`)" +
                             "VALUE(?,?,?,?,?,?,?,?)";
+
+
+
                 }else {
                     query ="UPDATE `users` SET `prenom` = ?,`nom` = ?,`matricule` = ?,`sexe` = ?,`telephone` = ?," +
                             "`email` = ?,`adresse` = ?,`mdp` = ? WHERE `users`.`id` ="+userId+"";
                 }
-
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
                 preparedStatement.setString(1, prenomTextField.getText());
                 preparedStatement.setString(2, nomTextField.getText());
                 preparedStatement.setString(3, matriculeTextField.getText());
@@ -105,9 +113,7 @@ public class AjoutUser implements Initializable {
                 preparedStatement.setString(6, emailTextField.getText());
                 preparedStatement.setString(7, adresseTextField.getText());
                 preparedStatement.setString(8, passwordField1.getText());
-                preparedStatement.execute();
                 this.vider();
-
             }
         }
 

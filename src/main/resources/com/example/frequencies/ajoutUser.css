@@ -1,5 +1,5 @@
 #anchor1 {
--fx-background-color:#F1F1F1;
+    -fx-background-color:#F1F1F1;
 }
 #anchor2 {
     -fx-background-color: #FFFFFF;
@@ -11,7 +11,6 @@
     -fx-background-radius: 20;
     -fx-text-fill: white;
     -fx-font-size: 17px;
-    -fx-font-weight: "Bold";
 }.button:hover {
     -fx-text-fill: #C4D2E5;
     -fx-background-color: #216283;
@@ -66,7 +65,8 @@
     -fx-background-color: #28a3f4;
 }
 .check-box:selected .box > .mark, .check-box:indeterminate > .box > .mark {
-    -fx-background-color: -fx-border-color: #3C7D94;
+    -fx-background-color: #3C7D94;
+    -fx-border-color: #3C7D94;
 }
 
 .choice-box {
@@ -87,5 +87,5 @@
 .choice-box > .label { -fx-text-fill: white; }
 .radio-button .radio:hover {
     -fx-border-color: #15171c; /*gives the button a square border
-    -fx-border-radius: 130px;  rounds the border around the button, "faking" a nice round outline*
-}*/
+    -fx-border-radius: 130px;  rounds the border around the button, "faking" a nice round outline*/
+}

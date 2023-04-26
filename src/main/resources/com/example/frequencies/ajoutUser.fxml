@@ -214,7 +214,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0">
                            <children>
-                              <Button fx:id="validerBouton" layoutX="67.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" text="valider" />
+                              <Button fx:id="validerBouton" layoutX="67.0" layoutY="-1.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="102.0" text="valider" />
                            </children>
                         </AnchorPane>
                      </children>

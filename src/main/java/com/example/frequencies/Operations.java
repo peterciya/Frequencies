@@ -75,7 +75,7 @@ public class Operations implements Initializable {
             Operations.add(new Operation(
                     resultSet.getInt("id"),
                     resultSet.getString("type"),
-                    resultSet.getDate("date"),
+                    resultSet.getTimestamp("date"),
                     resultSet.getInt("idUser"),
                     resultSet.getInt("idAbonne"),
                     resultSet.getInt("idFrequence")));

@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -52,7 +54,7 @@ public class Main extends Application {
     public void showAjoutFrequence() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Main.class.getResource("ajoutFrequence.fxml"));
-        VBox ajout = fxmlLoader.load();
+        AnchorPane ajout = fxmlLoader.load();
         Stage ajoutObjet = new Stage();
         ajoutObjet.setTitle("Ajouter une fréquence");
         ajoutObjet.setResizable(false);
@@ -67,7 +69,7 @@ public class Main extends Application {
     public void showAjoutAbonne() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Main.class.getResource("ajoutAbonne.fxml"));
-        VBox ajout = fxmlLoader.load();
+        AnchorPane ajout = fxmlLoader.load();
         Stage ajoutObjet = new Stage();
         ajoutObjet.setTitle("Ajouter un Abonné");
         ajoutObjet.setResizable(false);
