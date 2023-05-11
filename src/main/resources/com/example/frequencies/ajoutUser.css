@@ -79,6 +79,10 @@
     -fx-min-width: 223px;
     -fx-min-height: 33px
 }
+#message {
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: #FF5739;
+}
 .choice-box .context-menu {-fx-background-color: white;}
 .choice-box .menu-item:focused { -fx-background-color: orange; }
 .choice-box .menu-item > .label { -fx-text-fill: white; }

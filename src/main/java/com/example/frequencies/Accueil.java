@@ -180,9 +180,10 @@ public class Accueil implements Initializable {
                         resultSet3.getInt("id"),
                         resultSet3.getString("type"),
                         resultSet3.getDate("date"),
-                        resultSet3.getInt("idUser"),
+                        resultSet3.getInt("userConnected"),
                         resultSet3.getInt("idAbonne"),
-                        resultSet3.getInt("idFrequence"));
+                        resultSet3.getInt("idFrequence"),
+                        resultSet3.getInt("idUser"));
                 operations.add(operation);
             }
             sortedSearchListUsers = new SortedList<>(filteredSearchListUsers);
@@ -240,8 +241,7 @@ public class Accueil implements Initializable {
         searchUserButton.setOnMouseExited(mouseEvent -> searchListUsers.setVisible(false));
 
     }
-    public void search(ActionEvent event) throws IOException{
-
+    public void search(ActionEvent event) throws IOException, SQLException {
         searchFrequencyButton.setOnMouseClicked(mouseEvent -> {
             ArrayList<String> list = new ArrayList<>(freqT);
             Alert alert;
@@ -270,7 +270,7 @@ public class Accueil implements Initializable {
                                    }
                                }
                                for (int l = 0, t = arrayusers.size(); l < t; l++){
-                                   if (operation.getIdUser() == arrayusers.get(l).getId()) {
+                                   if (arrayusers.get(l).getId() == operation.getIdUserConnected()) {
                                        user1 = arrayusers.get(l);
                                    }
                                }
@@ -333,7 +333,7 @@ public class Accueil implements Initializable {
                             }
                         }
                         for (int l = 0, v = frequencies.size(); l < v; l++){
-                            if (frequencies.get(l).getId() == operation.getIdUser()){
+                            if (frequencies.get(l).getId() == operation.getIdFrequence()){
                                 frequence1 = frequencies.get(l);
                             }
                         }
@@ -374,13 +374,12 @@ public class Accueil implements Initializable {
                 alert.setContentText("Il semble que l'utilisateur que vous cherchez n'existe pas dans notre base de données; Reéssayez avec une autre.");
                 alert.show();
             } else {
-                for (int i = 0, s = operations.size(); i < arrayusers.size(); i++){
+                for (int i = 0, z = arrayusers.size(); i < z; i++){
                     if ((arrayusers.get(i).getPrenom() + " " + arrayusers.get(i).getNom()).equals(String.valueOf(searchUsersField.getText()))) {
                         user1 = arrayusers.get(i);
-                        for (int k = 0, t = operations.size(); k < t; k++){
-                            if(operations.get(k).getIdUser() == user1.getId() & operations.get(k).getType().equals("ajout")){
-                                nbfreq ++;
-                                frequence1 = frequencies.get(k);
+                        for (int k = 0, x = operations.size(); k < x; k++){
+                            if(operations.get(k).getIdUserConnected() == user1.getId() & operations.get(k).getType().equals("ajout")){
+                                nbfreq++;
                             }
                         }
                     }

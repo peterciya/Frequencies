@@ -39,7 +39,7 @@ public class Main extends Application {
     }
     public void showAjoutUser() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Main.class.getResource("ajoutUser.fxml"));
+        fxmlLoader.setLocation(Main.class.getResource("ajoutUtilisateur.fxml"));
         AnchorPane ajout = fxmlLoader.load();
         Stage ajoutObjet = new Stage();
         ajoutObjet.setTitle("Ajouter un utilisateur");

@@ -76,7 +76,7 @@ public class Frequences implements Initializable {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
             query = "DELETE FROM `frequence` WHERE `frequence`.`id` = " + frequence.getId();
-            query1 = "INSERT INTO `operation` (`type`, `date`, `idUser`, `idAbonne`, `idFrequence`) VALUE(?, ?, ?, ?, ?)";
+            query1 = "INSERT INTO `operation` (`type`, `date`, `userConnected`, `idAbonne`, `idFrequence`, `idUser`) VALUE(?, ?, ?, ?, ?, ?)";
 
             statement = connection.prepareStatement(query);
             statement1 = connection.prepareStatement(query1);
@@ -86,6 +86,7 @@ public class Frequences implements Initializable {
             statement1.setInt(3, Login.getUserOnline().getId());
             statement1.setInt(4, 0);
             statement1.setInt(5, frequence.getId());
+            statement1.setInt(6, 0);
             try {
                 statement.execute();
                 statement1.execute();

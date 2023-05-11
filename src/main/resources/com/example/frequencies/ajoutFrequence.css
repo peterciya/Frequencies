@@ -28,9 +28,9 @@
     -fx-font-size: 15px;
     -fx-background-opacity: 0.8;
 }
-.label {
-    -fx-text-fill: #000000;
-    -fx-font-size: 19px;
+#message {
+    -fx-text-fill: #FF5739;
+    -fx-font-size: 13px;
 }
 #title {
     -fx-font-size: 27px;

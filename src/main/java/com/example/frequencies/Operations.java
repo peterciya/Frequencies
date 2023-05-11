@@ -24,7 +24,7 @@ public class Operations implements Initializable {
     @FXML
     TableView<Operation> operations;
     @FXML
-    TableColumn<Operation, String> idColumn, typeColumn, dateColumn, idUserColumn, idAbonneColumn, idFrequenceColumn;
+    TableColumn<Operation, String> idColumn, typeColumn, dateColumn, idUserConnectedColumn, idAbonneColumn, idFrequenceColumn, idUserColumn;
     ObservableList<Operation> Operations = FXCollections.observableArrayList();
     Main main = new Main();
     Operation operation;
@@ -76,9 +76,10 @@ public class Operations implements Initializable {
                     resultSet.getInt("id"),
                     resultSet.getString("type"),
                     resultSet.getTimestamp("date"),
-                    resultSet.getInt("idUser"),
+                    resultSet.getInt("userConnected"),
                     resultSet.getInt("idAbonne"),
-                    resultSet.getInt("idFrequence")));
+                    resultSet.getInt("idFrequence"),
+                    resultSet.getInt("idUser")));
             operations.setItems(Operations);
 
         }
@@ -100,8 +101,9 @@ public class Operations implements Initializable {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        idUserColumn.setCellValueFactory(new PropertyValueFactory<>("idUser"));
+        idUserConnectedColumn.setCellValueFactory(new PropertyValueFactory<>("idUserConnected"));
         idAbonneColumn.setCellValueFactory(new PropertyValueFactory<>("idAbonne"));
         idFrequenceColumn.setCellValueFactory(new PropertyValueFactory<>("idFrequence"));
+        idUserColumn.setCellValueFactory(new PropertyValueFactory<>("idUser"));
     }
 }

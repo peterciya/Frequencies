@@ -70,12 +70,13 @@
                      <children>
                         <TableView fx:id="operations" layoutX="16.0" prefHeight="347.0" prefWidth="845.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn fx:id="idColumn" minWidth="8.0" prefWidth="84.0" text="ID" />
-                              <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="159.0" text="TYPE" />
-                              <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="136.0" text="DATE" />
-                              <TableColumn fx:id="idUserColumn" minWidth="0.0" prefWidth="126.0" text="ID_USER" />
-                              <TableColumn fx:id="idAbonneColumn" prefWidth="184.0" text="ID_ABONNE" />
-                              <TableColumn fx:id="idFrequenceColumn" prefWidth="184.0" text="ID_FREQUENCE" />
+                              <TableColumn fx:id="idColumn" minWidth="8.0" prefWidth="55.0" text="ID" />
+                              <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="109.0" text="TYPE" />
+                              <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="147.0" text="DATE" />
+                              <TableColumn fx:id="idUserConnectedColumn" minWidth="0.0" prefWidth="165.0" text="USER_CONNECTED" />
+                              <TableColumn fx:id="idAbonneColumn" prefWidth="111.0" text="ID_ABONNE" />
+                              <TableColumn fx:id="idFrequenceColumn" prefWidth="151.0" text="ID_FREQUENCE" />
+                              <TableColumn fx:id="idUserColumn" prefWidth="106.0" text="ID_USER" />
                            </columns>
                         </TableView>
                      </children>

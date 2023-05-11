@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="529.0" stylesheets="@AjoutUser.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.AjoutUser">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="529.0" stylesheets="@ajoutUser.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frequencies.AjoutUser">
    <children>
       <AnchorPane id="anchor2" layoutX="45.0" layoutY="39.0" prefHeight="673.0" prefWidth="440.0">
          <children>
@@ -22,7 +22,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0">
                            <children>
-                              <TextField fx:id="prenomTexField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextField fx:id="prenomTextField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -122,7 +122,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0">
                            <children>
-                              <TextField fx:id="mailTextField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextField fx:id="emailTextField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -142,7 +142,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0">
                            <children>
-                              <TextField fx:id="adressTextField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextField fx:id="adresseTextField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -162,41 +162,22 @@
                         </AnchorPane>
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0">
                            <children>
-                              <TextField fx:id="passTextField" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TextField fx:id="passwordField" layoutX="2.0" layoutY="-1.0" />
                            </children>
                         </AnchorPane>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="492.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="248.0" />
-                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="498.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="248.0">
-                           <children>
-                              <Label alignment="CENTER_RIGHT" layoutX="94.0" layoutY="40.0" prefHeight="100.0" prefWidth="235.0" text="Confirmer mot de passe : " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0">
-                           <children>
-                              <TextField fx:id="confirm" layoutX="24.0" layoutY="43.0" prefHeight="100.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="502.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="248.0" />
                         <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="506.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <AnchorPane prefHeight="100.0" prefWidth="248.0" />
-                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="248.0" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="381.0">
+                           <children>
+                              <TextField id="message" fx:id="messageTextField" layoutX="-1.0" layoutY="-7.0" prefHeight="33.0" prefWidth="373.0" />
+                           </children></AnchorPane>
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="509.0" prefHeight="100.0" prefWidth="200.0">
@@ -227,7 +208,7 @@
                   </HBox>
                </children>
             </VBox>
-            <Label id="title" layoutX="95.0" layoutY="39.0" text="Ajouter un utilisateur" />
+            <Label id="title" fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="30.0" text="Ajouter un utilisateur" />
          </children>
       </AnchorPane>
    </children>

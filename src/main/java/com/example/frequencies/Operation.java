@@ -6,17 +6,19 @@ public class Operation {
     private int id;
     private String type;
     private Date date;
-    private int idUser;
+    private int idUserConnected;
     private int idAbonne;
     private int idFrequence;
+    private int idUser;
 
-    public Operation(int id, String type, Date date, int idUser, int idAbonne, int idFrequence) {
+    public Operation(int id, String type, Date date, int idUserConnected, int idAbonne, int idFrequence, int idUser) {
         this.id = id;
         this.type = type;
         this.date = date;
-        this.idUser = idUser;
+        this.idUserConnected = idUserConnected;
         this.idAbonne = idAbonne;
         this.idFrequence = idFrequence;
+        this.idUser = idUser;
     }
 
     public int getId() {
@@ -43,12 +45,12 @@ public class Operation {
         this.date = date;
     }
 
-    public int getIdUser() {
-        return idUser;
+    public int getIdUserConnected() {
+        return idUserConnected;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setIdUserConnected(int idUserConnected) {
+        this.idUserConnected = idUserConnected;
     }
 
     public int getIdAbonne() {
@@ -65,5 +67,13 @@ public class Operation {
 
     public void setIdFrequence(int idFrequence) {
         this.idFrequence = idFrequence;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 }
